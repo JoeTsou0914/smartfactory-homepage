@@ -1,0 +1,411 @@
+/* src/index.css */
+/* 1. 外掛匯入（必須最前面） */
+@import "tw-animate-css";
+@import "tailwindcss";
+/* 2. 自訂 PostCSS 變種（若有，也要在 tailwind 指令前） */
+@custom-variant dark (&:is(.dark *));
+
+/* ─── 全域 CSS 變數與預設 ───────────────────────────────── */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  /* Tailwind CSS Theme 變數映射 */
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  
+  /* 視口高度變數 - 將由 JavaScript 設置 */
+  --vh: 1vh;
+}
+
+/* ─── 連結樣式 ───────────────────────────────────────────── */
+a {
+  font-weight: 500;
+  color: #646cff;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* ─── HTML & Body Reset ───────────────────────────────────── */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ─── Body Reset & 佈局 ───────────────────────────────────── */
+body {
+  margin: 0;
+  display: block; /* 改為 block 而非 flex */
+  min-width: 320px;
+  min-height: 100vh; /* 後備 */
+  min-height: calc(var(--vh, 1vh) * 100); /* 使用 JS 計算的視口高度 */
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* ─── 標題樣式 ───────────────────────────────────────────── */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* ─── 按鈕樣式 ───────────────────────────────────────────── */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ─── 明亮模式覆寫 ───────────────────────────────────────── */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* ─── Inline Theme 變數 ───────────────────────────────────── */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* ─── Dark Mode 覆寫 ───────────────────────────────────────── */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+}
+
+/* ─── Base Layer（Tailwind @layer base 結合） ───────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ─── 應用佈局 ───────────────────────────────────────── */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+}
+
+.content-container {
+  flex: 1;
+  width: 100%;
+}
+
+/* ─── 輪播區域樣式 ───────────────────────────────────────── */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* 固定高度 */
+  overflow: hidden;
+  background-color: #1a4998;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-content {
+  display: flex;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+.carousel-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2rem;
+  color: white;
+}
+
+.carousel-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image img {
+  max-width: 100%;
+  max-height: 400px; /* 圖片最大高度 */
+  object-fit: contain; /* 確保圖片比例不變 */
+  border-radius: 0.5rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  opacity: 1;
+}
+
+/* ─── 翻轉卡片效果 ───────────────────────────────────────── */
+.flip-card {
+  perspective: 1000px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.1s;
+}
+
+.flip-card:hover {
+  transform: translateY(-5px);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: var(--foreground);
+  border: 1px solid rgba(0, 0, 120, 0.1);
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  background-color: rgb(29, 78, 216); /* blue-700 */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* 禁用 Safari 上翻轉卡片時的文字模糊問題 */
+.flip-card * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 確保卡片在觸摸設備上的觸控感應更佳 */
+@media (hover: none) {
+  .flip-card:hover {
+    transform: none;
+  }
+  
+  .flip-card-inner {
+    transition: transform 0.4s ease;
+  }
+}
+
+/* 卡片內容進入動畫 */
+.flip-card-content-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.flip-card-content-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+  transition-delay: 0.2s;
+}
+
+/* 為小螢幕調整卡片高度 */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee {
+  animation: marquee 30s linear infinite;
+  display: flex;
+  white-space: nowrap;
+}
+
+/* 強制移除導覽列和 Hero 之間的間隙 */
+nav {
+  margin-bottom: 0 !important;
+}
+
+header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Hero 區塊內容適當上移 */
+header > div {
+  padding-top: 2.5rem; /* 10 * 0.25rem */
+}
+
+/* 增強下拉選單的樣式 */
+nav .dropdown-item {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* 針對行動裝置的響應式調整 */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .carousel-content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  .carousel-text {
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+  
+  .carousel-image img {
+    max-height: 200px;
+  }
+}
+
+/* 新增 NavBar 樣式 */
+.nav-fixed {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  width: 100% !important;
+}
+
+/* 添加文字陰影增加可讀性 */
+.text-shadow-sm {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* 確保白色文字足夠清晰 */
+.nav-fixed a.text-white, 
+.nav-fixed .text-white {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+/* 下拉菜單的共用樣式 */
+.dropdown-menu {
+  background-color: white !important;
+  color: #1f2937 !important;
+  border-radius: 0.375rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
