@@ -1,0 +1,38 @@
+{
+  "title": "About YU HWA",
+  "subtitle": "We focus on innovation and integration in textile smart manufacturing",
+  "intro": {
+    "title": "Company Introduction",
+    "p1": "Founded in 1970, YU HWA was the first textile machine parts manufacturer in Taiwan to introduce air nozzle technology.",
+    "p2": "We specialize in developing intelligent quality monitoring systems, sensors, and machine integration solutions, dedicated to supporting digital transformation in traditional industries.",
+    "p3": "With innovation, precision, and trust as our core values, YU HWA continues to overcome technical challenges and improve production efficiency and product quality."
+  },
+  "core": {
+    "title": "Core Values",
+    "innovation": "Innovation",
+    "precision": "Precision",
+    "trust": "Trust",
+    "desc1": "Relentlessly pursuing technological innovation to develop smarter and more efficient solutions, leading the direction of industrial development.",
+    "desc2": "Utilizing high-precision sensing and data analytics to provide accurate production monitoring and ensure consistent product quality.",
+    "desc3": "Earning customer trust with professional technology and premium service, becoming a reliable partner for manufacturing transformation."
+  },
+  "strength": {
+    "title": "Our Expertise",
+    "s1": {
+      "title": "Cross-brand Machine Integration Experience",
+      "desc": "Proven experience integrating mainstream and legacy machines, supporting multi-brand centralized management."
+    },
+    "s2": {
+      "title": "Sensor R&D Capability",
+      "desc": "In-house development of yarn fuzz and tension sensors, offering full hardware-software solutions."
+    },
+    "s3": {
+      "title": "AI Data Analysis Technology",
+      "desc": "Applying AI for anomaly prediction and quality assessment, advancing system intelligence."
+    },
+    "s4": {
+      "title": "System Customization and Factory Planning",
+      "desc": "Customizable modules and workflows tailored to client needs, helping plan optimal smart factory architecture."
+    }
+  }
+}

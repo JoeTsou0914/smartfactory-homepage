@@ -49,12 +49,20 @@ a:hover {
 }
 
 /* ─── HTML & Body Reset ───────────────────────────────────── */
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+html {
+  font-size: 18px; /* 原為 16px，此處調大整體字體 12.5% */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 19px; /* 在桌機上略為放大 */
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 20px; /* 大螢幕上放大至 125% */
+  }
 }
 
 /* ─── Body Reset & 佈局 ───────────────────────────────────── */
@@ -65,6 +73,11 @@ body {
   min-height: 100vh; /* 後備 */
   min-height: calc(var(--vh, 1vh) * 100); /* 使用 JS 計算的視口高度 */
   font-feature-settings: "rlig" 1, "calt" 1;
+  /* 優化滾動行為 */
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  
+  padding-top: 64px; /* ✅ NavBar 高度，確保不被遮住 */
 }
 
 /* ─── 標題樣式 ───────────────────────────────────────────── */
@@ -170,7 +183,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh; /* 這樣就夠，不需要再用 JS vh 計算 */
   width: 100%;
 }
 
@@ -327,18 +340,116 @@ button:focus-visible {
   transition-delay: 0.2s;
 }
 
-/* 為小螢幕調整卡片高度 */
-
+/* ─── 跑馬燈動畫 ─────────────────────────────────────────── */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 .marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 10s linear infinite;
   display: flex;
   white-space: nowrap;
 }
 
+/* ─── NavBar 相關樣式 ─────────────────────────────────────── */
+/* 新增 NavBar 樣式 */
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+}
+
+/* 添加文字陰影增加可讀性 */
+.text-shadow-sm {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.text-shadow-md {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* 確保白色文字足夠清晰 */
+.nav-fixed a.text-white, 
+.nav-fixed .text-white {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+/* Nav Link 白色樣式 */
+.nav-link-white {
+  color: white !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-link-white:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transform: translateY(-1px);
+}
+
+/* ─── 漸層文字效果 ─────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(90deg, #f43f5e, #f97316, #eab308, #10b981, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+
+/* 漸層動畫 */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ─── 背景模糊與陰影效果 ─────────────────────────────────── */
+/* 背景模糊效果 */
+.backdrop-blur-navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* 陰影效果增強 */
+.shadow-navbar {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* ─── 下拉選單樣式 ─────────────────────────────────────────── */
+/* 下拉菜單的共用樣式 */
+.dropdown-menu {
+  background-color: white !important;
+  color: #1f2937 !important;
+  border-radius: 0.375rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 下拉選單增強效果 */
+.dropdown-menu-enhanced {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 增強下拉選單的樣式 */
+nav .dropdown-item {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ─── 佈局間距調整 ─────────────────────────────────────────── */
 /* 強制移除導覽列和 Hero 之間的間隙 */
 nav {
   margin-bottom: 0 !important;
@@ -354,12 +465,7 @@ header > div {
   padding-top: 2.5rem; /* 10 * 0.25rem */
 }
 
-/* 增強下拉選單的樣式 */
-nav .dropdown-item {
-  font-weight: 500;
-  letter-spacing: 0.01em;
-}
-
+/* ─── 響應式設計 ─────────────────────────────────────────── */
 /* 針對行動裝置的響應式調整 */
 @media (max-width: 768px) {
   .carousel-container {
@@ -380,32 +486,144 @@ nav .dropdown-item {
   .carousel-image img {
     max-height: 200px;
   }
+  
+  /* 行動裝置上的文字大小調整 */
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  .nav-fixed h1 {
+    font-size: 1.8em;
+  }
 }
 
-/* 新增 NavBar 樣式 */
-.nav-fixed {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 50 !important;
-  width: 100% !important;
+/* ─── 滾動優化 ─────────────────────────────────────────── */
+/* 滾動行為優化 */
+html {
+  scroll-behavior: smooth;
 }
 
-/* 添加文字陰影增加可讀性 */
-.text-shadow-sm {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+/* 確保頁面內容不會被固定NavBar遮擋 */
+body {
+  scroll-padding-top: 80px;
 }
 
-/* 確保白色文字足夠清晰 */
-.nav-fixed a.text-white, 
-.nav-fixed .text-white {
-  color: white !important;
-  font-weight: bold !important;
+/* ─── 動畫與過渡效果 ─────────────────────────────────────── */
+/* 全局過渡動畫 */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* 下拉菜單的共用樣式 */
-.dropdown-menu {
-  background-color: white !important;
-  color: #1f2937 !important;
-  border-radius: 0.375rem !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+/* 防止動畫影響佈局的元素 */
+.nav-fixed,
+.nav-fixed * {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── 輔助工具類別 ─────────────────────────────────────────── */
+/* 文字截斷 */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 多行文字截斷 */
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 隱藏滾動條但保持功能 */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── 載入與動畫效果 ─────────────────────────────────────── */
+/* 淡入動畫 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* 滑入動畫 */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-top {
+  animation: slideInFromTop 0.5s ease-out;
+}
+
+/* ─── 可訪問性與性能優化 ─────────────────────────────────── */
+/* 減少動態效果 for 使用者偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .marquee {
+    animation: none;
+  }
+  
+  .gradient-text {
+    animation: none;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6, #1d4ed8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Focus 樣式增強 */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* 選取文字顏色 */
+::selection {
+  background-color: #3b82f6;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #3b82f6;
+  color: white;
 }

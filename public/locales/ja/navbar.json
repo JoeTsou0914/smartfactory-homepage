@@ -1,0 +1,16 @@
+{
+  "home": "ホーム",
+  "about": "会社情報",
+  "about_company": "会社概要",
+  "about_history": "沿革",
+  "services": "製品・サービス",
+  "services_all": "すべての製品",
+  "services_qai": "張力監視システム",
+  "services_fuzz": "毛羽検出システム",
+  "services_heat": "加熱システム",
+  "services_integration": "機械統合",
+  "services_factory": "スマート工場",
+  "services_parts": "紡績部品",
+  "customers": "顧客事例",
+  "contact": "お問い合わせ"
+}

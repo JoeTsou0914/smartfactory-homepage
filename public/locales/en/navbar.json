@@ -1,0 +1,16 @@
+{
+  "home": "Home",
+  "about": "About",
+  "about_company": "Company Profile",
+  "about_history": "Company History",
+  "services": "Services",
+  "services_all": "All Products",
+  "services_qai": "Tension Monitoring",
+  "services_fuzz": "Fuzz Detection",
+  "services_heat": "Heating System",
+  "services_integration": "Machine Integration",
+  "services_factory": "Smart Factory",
+  "services_parts": "Textile Components",
+  "customers": "Customers",
+  "contact": "Contact"
+}

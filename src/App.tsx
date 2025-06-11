@@ -8,6 +8,8 @@ import Services from "@/pages/Services";
 import Customers from "@/pages/Customers";
 import Contact from "@/pages/Contact";
 import ProductDetail from "@/pages/ProductDetail";
+import "@fontsource/noto-serif-tc/500.css"; // 中等字重
+import "@fontsource/noto-serif-tc/700.css"; // 粗體
 
 export default function App() {
   useEffect(() => {

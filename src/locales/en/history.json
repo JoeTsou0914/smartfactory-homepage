@@ -1,0 +1,19 @@
+{
+  "title": "Journey of Innovation",
+  "milestone1": {
+    "title": "Foundation (1983)",
+    "desc": "YU HWA was founded with a focus on textile components, pioneering air nozzle and spindle guide technologies."
+  },
+  "milestone2": {
+    "title": "Technical Transformation (1990–2005)",
+    "desc": "Adopted CNC lathes and precision tools, developing the first-generation tensioner to enhance textile quality."
+  },
+  "milestone3": {
+    "title": "Smart Manufacturing (2015)",
+    "desc": "Launched the QAI system integrating sensors, PLC, and SQL Server for central monitoring."
+  },
+  "milestone4": {
+    "title": "Global Expansion (2023~)",
+    "desc": "Developed fuzz detection, BTSR replacements, and full-factory integration solutions for global markets."
+  }
+}

@@ -119,7 +119,7 @@ export default function Services() {
                     ))}
                   </div>
                   <Link to={`/product/${item.id}`}>
-                    <Button className="w-full bg-blue-700 hover:bg-blue-800 text-white">
+                    <Button className="w-full bg-blue-700 hover:bg-blue-800 text-black">
                       了解更多 <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -164,7 +164,7 @@ export default function Services() {
             </div>
             <div className="hidden md:block">
               <img 
-                src="/images/demo/custom-solution.jpg" 
+                src="/images/service/custom-solution.jpg" 
                 alt="客製化解決方案" 
                 className="w-full rounded-lg shadow-lg"
                 onError={(e) => {

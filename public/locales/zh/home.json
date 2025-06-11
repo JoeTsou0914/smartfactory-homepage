@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "smartManufacturing": {
+      "title": "智慧製造•精準監控",
+      "description": "提供即時生產數據分析與設備整合解決方案，全面提升產線效能與品質，讓您的製造流程更加智能化、自動化。"
+    },
+    "sensorApplication": {
+      "title": "品質，從感測開始",
+      "description": "整合高精度感測器與即時監控系統，快速掌握品質數據，自動預警異常，幫助您打造一致、可靠的高品質製造流程。"
+    },
+    "buttons": {
+      "learnSolutions": "了解解決方案",
+      "contactUs": "聯絡我們"
+    }
+  },
+  "stats": {
+    "maintenanceCost": "維修成本",
+    "revenueIncrease": "總收益提升",
+    "productivityImprovement": "產能提升",
+    "wasteReduction": "廢品減少",
+    "downtimeReduction": "停機時間降低",
+    "laborCostSaving": "人力成本節省",
+    "dataCollectionSpeed": "數據收集速度"
+  },
+  "painPoints": {
+    "title": "紡織廠轉型要點",
+    "hoverHint": "滑鼠移過來查看解決方案",
+    "solutionHeader": "解決問題：",
+    "learnMore": "了解更多方案",
+    "quality": {
+      "title": "紗線品質難以控管",
+      "reasons": ["缺少品質監測系統", "舊型系統難以操作"],
+      "solution": {
+        "title": "QAI 智能品質監測系統",
+        "description": "即時監控紗線張力，通過AI分析預警潛在問題，協助生產線穩定控制品質，降低不良率和客訴"
+      }
+    },
+    "digitalization": {
+      "title": "機台未落實全面資訊化",
+      "reasons": ["機台無法聯網，耗費大量人力成本將資訊填入系統", "紗線異常無法即時通知相關人員，客訴率上升"],
+      "solution": {
+        "title": "SI01 通訊模組整合",
+        "description": "輕鬆將舊有設備升級為智能設備，自動上傳製造量、紗線等級、異常資訊，並即時推送通知"
+      }
+    },
+    "integration": {
+      "title": "各別機台無法整合",
+      "reasons": ["機台廠牌過多，各個機台無法與系統溝通", "監測系統開發商不存在，無法更新系統"],
+      "solution": {
+        "title": "機台整合系統",
+        "description": "打破品牌限制，實現所有機台的統一管理和數據整合，建立完整的數位化工廠生態系統"
+      }
+    },
+    "management": {
+      "title": "難以透過系統整廠管理",
+      "reasons": ["機台品牌與型號過多，造成系統紊亂", "管理分散無法統一"],
+      "solution": {
+        "title": "智慧工廠管理平台",
+        "description": "多工廠、多設備資訊集中管理，整合生產、品管、倉儲等系統，實現全廠數據透明化"
+      }
+    }
+  },
+  "services": {
+    "title": "我們的服務",
+    "subtitle": "提供全方位的智慧製造解決方案，從設備監控到數據分析，幫助您實現工業4.0",
+    "monitoring": {
+      "title": "即時設備監控",
+      "description": "整合感測器、機台參數與資料庫，提供設備即時狀態與歷史紀錄查詢，讓您隨時掌握生產狀況。"
+    },
+    "ai": {
+      "title": "AI 品質分析",
+      "description": "運用 AI 模型自動分析毛羽、撚度與溫度資料，提升品管效率與一致性，降低人工檢測的誤差率。"
+    },
+    "platform": {
+      "title": "工廠整合平台",
+      "description": "多工廠、多設備資訊集中管理，支援瀏覽器、手機與大型監控面板介面，方便遠端監控與管理。"
+    }
+  },
+   "products": {
+    "title": "產品解決方案",
+    "subtitle": "根據不同需求，我們提供客製化的解決方案，幫助企業提升生產效率和產品品質",
+    "popular": "熱門",
+    "learnMore": "了解更多",
+    "viewAll": "查看所有產品",
+    "qai": {
+      "title": "QAI 智能品質監測系統",
+      "description": "即時監控紗線張力，避免斷線與品質不穩，適用假撚加工與高速加彈工程。",
+      "imageAlt": "QAI系統"
+    },
+    "fuzz": {
+      "title": "毛羽感測器",
+      "description": "高靈敏毛羽感測器，精確偵測微細毛羽，提升檢驗效率與產品品質。",
+      "imageAlt": "毛羽感測器"
+    },
+    "center": {
+      "title": "控制中心系統",
+      "description": "集中管理多台設備，整合各項生產數據，簡化工廠運作流程。",
+      "imageAlt": "控制中心系統"
+    },
+    "si01": {
+      "title": "SI01 通訊模組整合",
+      "description": "快速接入，將舊有設備升級為智能設備，實現設備間的無縫整合傳輸。",
+      "imageAlt": "SI01通訊模組"
+    }
+  },
+  "trial": {
+    "title": "感測器試用方案",
+    "description": "提供企業14天免費試用，讓您體驗智慧製造的優勢，無需立即投入大量成本。",
+    "features": [
+      "專業技術團隊協助安裝與調試",
+      "完整教育訓練與技術支援",
+      "試用期後享有獨家優惠方案"
+    ],
+    "contactButton": "立即聯絡我們"
+  },
+  "partners": {
+    "title": "合作夥伴",
+    "subtitle": "信任我們的企業夥伴，攜手共創智慧製造的未來"
+  },
+  "cta": {
+    "title": "需要智慧工廠整合方案？",
+    "description": "無論您是想升級現有設備，還是建立全新的智慧工廠系統，我們都能為您提供專業的解決方案。立即聯繫我們，獲取免費諮詢！",
+    "button": "免費諮詢"
+  },
+  "footer": {
+    "companyName": "雩華企業",
+    "companyDescription": "專注於紡織智慧製造領域的領導品牌，提供完整的解決方案，幫助企業轉型升級。",
+    "contactInfo": "聯絡資訊",
+    "address": "新北市新店區中正路538巷1號5樓",
+    "phone": "電話: +886-2-22186363",
+    "email": "Email: service@yuhwa.com.tw",
+    "followUs": "追蹤我們",
+    "copyright": "© 2025 雩華企業有限公司. All rights reserved."
+  },
+  "loading": "載入中..."
+}

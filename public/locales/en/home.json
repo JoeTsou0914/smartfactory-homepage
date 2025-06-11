@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "smartManufacturing": {
+      "title": "Smart Manufacturing • Precision Monitoring",
+      "description": "Providing real-time production data analysis and equipment integration solutions to comprehensively enhance production line efficiency and quality, making your manufacturing processes more intelligent and automated."
+    },
+    "sensorApplication": {
+      "title": "Quality Starts from Sensing",
+      "description": "Integrating high-precision sensors with real-time monitoring systems to quickly grasp quality data, automatically alert anomalies, and help you create consistent, reliable high-quality manufacturing processes."
+    },
+    "buttons": {
+      "learnSolutions": "Learn Solutions",
+      "contactUs": "Contact Us"
+    }
+  },
+  "stats": {
+    "maintenanceCost": "Maintenance Cost",
+    "revenueIncrease": "Revenue Increase",
+    "productivityImprovement": "Productivity Improvement",
+    "wasteReduction": "Waste Reduction",
+    "downtimeReduction": "Downtime Reduction",
+    "laborCostSaving": "Labor Cost Saving",
+    "dataCollectionSpeed": "Data Collection Speed"
+  },
+  "painPoints": {
+    "title": "Textile Factory Transformation Key Points",
+    "hoverHint": "Hover to view solutions",
+    "solutionHeader": "Solution:",
+    "learnMore": "Learn More Solutions",
+    "quality": {
+      "title": "Yarn Quality Control Challenges",
+      "reasons": ["Lack of quality monitoring system", "Outdated systems difficult to operate"],
+      "solution": {
+        "title": "QAI Smart Quality Monitoring System",
+        "description": "Real-time yarn tension monitoring, AI analysis for early warning of potential issues, assisting production lines in stable quality control, reducing defect rates and customer complaints"
+      }
+    },
+    "digitalization": {
+      "title": "Incomplete Machine Digitalization",
+      "reasons": ["Machines cannot connect to network, requiring significant labor costs to input data into system", "Unable to notify relevant personnel in real-time of yarn anomalies, increasing complaint rates"],
+      "solution": {
+        "title": "SI01 Communication Module Integration",
+        "description": "Easily upgrade existing equipment to smart devices, automatically upload production volume, yarn grade, anomaly information, and push real-time notifications"
+      }
+    },
+    "integration": {
+      "title": "Individual Machines Cannot Be Integrated",
+      "reasons": ["Too many machine brands, individual machines cannot communicate with system", "Monitoring system developers no longer exist, unable to update systems"],
+      "solution": {
+        "title": "Machine Integration System",
+        "description": "Breaking brand limitations, achieving unified management and data integration of all machines, establishing a complete digital factory ecosystem"
+      }
+    },
+    "management": {
+      "title": "Difficult Whole-Factory System Management",
+      "reasons": ["Too many machine brands and models causing system chaos", "Distributed management cannot be unified"],
+      "solution": {
+        "title": "Smart Factory Management Platform",
+        "description": "Centralized management of multi-factory, multi-equipment information, integrating production, quality control, warehousing systems, achieving factory-wide data transparency"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Providing comprehensive smart manufacturing solutions, from equipment monitoring to data analysis, helping you achieve Industry 4.0",
+    "monitoring": {
+      "title": "Real-time Equipment Monitoring",
+      "description": "Integrating sensors, machine parameters, and databases to provide real-time equipment status and historical record queries, keeping you informed of production conditions at all times."
+    },
+    "ai": {
+      "title": "AI Quality Analysis",
+      "description": "Using AI models to automatically analyze fuzz, twist, and temperature data, improving quality control efficiency and consistency, reducing manual inspection error rates."
+    },
+    "platform": {
+      "title": "Factory Integration Platform",
+      "description": "Centralized management of multi-factory, multi-equipment information, supporting browser, mobile, and large monitoring panel interfaces for convenient remote monitoring and management."
+    }
+  },
+ "products": {
+    "title": "Product Solutions",
+    "subtitle": "Based on different needs, we provide customized solutions to help enterprises improve production efficiency and product quality",
+    "popular": "Popular",
+    "learnMore": "Learn More",
+    "viewAll": "View All Products",
+    "qai": {
+      "title": "QAI Smart Quality Monitoring System",
+      "description": "Real-time monitoring of yarn tension to prevent breakage and quality instability, suitable for false twist processing and high-speed texturing.",
+      "imageAlt": "QAI System"
+    },
+    "fuzz": {
+      "title": "Fuzz Detection Sensor",
+      "description": "High-sensitivity fuzz sensor that accurately detects fine fuzz, improving inspection efficiency and product quality.",
+      "imageAlt": "Fuzz Detection Sensor"
+    },
+    "center": {
+      "title": "Control Center System",
+      "description": "Centralized management of multiple equipment, integrating various production data to simplify factory operations.",
+      "imageAlt": "Control Center System"
+    },
+    "si01": {
+      "title": "SI01 Communication Module Integration",
+      "description": "Quick access to upgrade existing equipment to smart equipment, achieving seamless integration and transmission between devices.",
+      "imageAlt": "SI01 Communication Module"
+    }
+  },
+  "trial": {
+    "title": "Sensor Trial Program",
+    "description": "Offering enterprises a 14-day free trial to experience the advantages of smart manufacturing without immediate significant investment.",
+    "features": [
+      "Professional technical team assists with installation and debugging",
+      "Complete training and technical support",
+      "Exclusive discount programs after trial period"
+    ],
+    "contactButton": "Contact Us Now"
+  },
+  "partners": {
+    "title": "Partners",
+    "subtitle": "Enterprise partners who trust us, working together to create the future of smart manufacturing"
+  },
+  "cta": {
+    "title": "Need Smart Factory Integration Solutions?",
+    "description": "Whether you want to upgrade existing equipment or establish a new smart factory system, we can provide professional solutions. Contact us now for free consultation!",
+    "button": "Free Consultation"
+  },
+  "footer": {
+    "companyName": "Yu Hwa Enterprise",
+    "companyDescription": "A leading brand focusing on textile smart manufacturing, providing complete solutions to help enterprises transform and upgrade.",
+    "contactInfo": "Contact Information",
+    "address": "5F, No. 1, Lane 538, Zhongzheng Road, Xindian District, New Taipei City",
+    "phone": "Phone: +886-2-22186363",
+    "email": "Email: service@yuhwa.com.tw",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 Yu Hwa Enterprise Co., Ltd. All rights reserved."
+  },
+  "loading": "Loading..."
+}

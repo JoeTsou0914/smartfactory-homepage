@@ -6,30 +6,41 @@ import { ArrowLeft, CheckCircle, Download, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const productData: Record<string, {
-  title: { zh: string; en: string };
-  description: { zh: string; en: string };
+  title: { zh: string; en: string; ja: string };
+  description: { zh: string; en: string; ja: string };
   image: string;
-  features: { zh: string[]; en: string[] };
-  applications: { zh: string; en: string };
-  benefits: { zh: string[]; en: string[] };
-  specs: { zh: { name: string; value: string }[]; en: { name: string; value: string }[] };
+  features: { zh: string[]; en: string[]; ja: string[] };
+  applications: { zh: string; en: string; ja: string };
+  benefits: { zh: string[]; en: string[]; ja: string[] };
+  specs: {
+    zh: { name: string; value: string }[];
+    en: { name: string; value: string }[];
+    ja: { name: string; value: string }[];
+  };
   video?: string;
   file?: string;
 }> = {
   qai: {
-    title: { zh: "QAI 智能品質監測系統", en: "QAI Smart Quality Monitoring System" },
+    title: {
+      zh: "QAI 智能品質監測系統",
+      en: "QAI Smart Quality Monitoring System",
+      ja: "QAIスマート品質監視システム"
+    },
     description: {
       zh: "即時監控紗線張力，避免斷線與品質不穩，適用假撚加工與高速加彈。透過智能演算法分析生產數據，提前預警潛在問題，讓品質管理更加高效。",
-      en: "Real-time tension monitoring for DTY and high-speed operations."
+      en: "Real-time tension monitoring for DTY and high-speed operations.",
+      ja: "DTYや高速加撚工程向けのリアルタイム張力監視システム。断糸や品質の不安定さを防止し、AIで生産データを解析して予兆検知を行います。"
     },
     image: "/images/demo/320x210.png",
     features: {
       zh: ["張力圖像曲線視覺化", "斷線即時通知", "張力穩定度分析報表", "AI預測性維護", "多機台集中監控"],
-      en: ["Tension graph visualization", "Real-time break alert", "Tension stability reporting"]
+      en: ["Tension graph visualization", "Real-time break alert", "Tension stability reporting"],
+      ja: ["張力グラフ可視化", "断糸リアルタイム通知", "張力安定度分析レポート", "AIによる予測保全", "複数機の集中監視"]
     },
     benefits: {
       zh: ["減少30%斷線率", "提高20%生產效率", "降低15%不良品率", "節省人力成本"],
-      en: ["Reduce breakage by 30%", "Improve efficiency by 20%", "Reduce defects by 15%"]
+      en: ["Reduce breakage by 30%", "Improve efficiency by 20%", "Reduce defects by 15%"],
+      ja: ["断糸率を30%削減", "生産効率を20%向上", "不良率を15%削減", "人件費を削減"]
     },
     specs: {
       zh: [
@@ -43,29 +54,43 @@ const productData: Record<string, {
         { name: "Accuracy", value: "±1%" },
         { name: "Sampling Rate", value: "1000Hz" },
         { name: "Interfaces", value: "RS485/Ethernet" }
+      ],
+      ja: [
+        { name: "監視範囲", value: "0.5-500cN" },
+        { name: "精度", value: "±1%" },
+        { name: "サンプリング周波数", value: "1000Hz" },
+        { name: "対応インターフェース", value: "RS485/Ethernet" }
       ]
     },
     applications: {
       zh: "假撚機、加彈機張力管理，適用於各類紡織生產線。",
-      en: "Tension monitoring in DTY machines."
+      en: "Tension monitoring in DTY machines.",
+      ja: "DTY加撚機などの張力管理。各種テキスタイル生産ラインに対応。"
     },
-    video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    video: "https://youtube.com/embed/AACqdEpzoUk",
     file: "/files/qai.pdf"
   },
-  fuzz: {
-    title: { zh: "毛羽檢測系統", en: "Fuzz Detection System" },
+    fuzz: {
+    title: {
+      zh: "毛羽檢測系統",
+      en: "Fuzz Detection System",
+      ja: "フワ検出システム"
+    },
     description: {
       zh: "高靈敏毛羽感測器，即時辨識毛羽累積情形，輔助品質控管。採用高解析度光學系統，精確捕捉微細毛羽變化。",
-      en: "Real-time detection of fuzz for quality assurance."
+      en: "Real-time detection of fuzz for quality assurance.",
+      ja: "高感度のフワ検出センサーで、フワの蓄積をリアルタイムに検知。高解像度光学技術で微細な変化を正確に捉えます。"
     },
     image: "/images/demo/320x210.png",
     features: {
       zh: ["0.1mm 精度偵測", "毛羽分層統計分析", "AI 演算法動態補償", "多頭即時監控", "異常自動警示"],
-      en: ["0.1mm detection", "Multi-layer fuzz analysis", "AI-based calibration"]
+      en: ["0.1mm detection", "Multi-layer fuzz analysis", "AI-based calibration"],
+      ja: ["0.1mm精度検出", "フワの層別統計分析", "AIによる補正アルゴリズム", "多点同時監視", "異常の自動警告"]
     },
     benefits: {
       zh: ["提高品質檢測準確度", "減少人工檢測時間", "降低客訴率", "提升產品一致性"],
-      en: ["Improve inspection accuracy", "Reduce manual inspection", "Lower customer complaints"]
+      en: ["Improve inspection accuracy", "Reduce manual inspection", "Lower customer complaints"],
+      ja: ["品質検査の精度向上", "手動検査時間の短縮", "クレーム率の低下", "製品の一貫性向上"]
     },
     specs: {
       zh: [
@@ -79,28 +104,42 @@ const productData: Record<string, {
         { name: "Scan Width", value: "600mm" },
         { name: "Scan Speed", value: "Max 60m/min" },
         { name: "Interfaces", value: "Touch/Remote" }
+      ],
+      ja: [
+        { name: "解像度", value: "0.1mm" },
+        { name: "スキャン幅", value: "600mm" },
+        { name: "スキャン速度", value: "最大60m/分" },
+        { name: "対応インターフェース", value: "タッチパネル/遠隔監視" }
       ]
     },
     applications: {
       zh: "包覆紗線、緊密紡、特種纖維品管。",
-      en: "Used in yarn covering and compact spinning."
+      en: "Used in yarn covering and compact spinning.",
+      ja: "カバリングヤーン、コンパクトスピニング、特殊繊維品質管理に活用。"
     },
     file: "/files/fuzz.pdf"
   },
   heat: {
-    title: { zh: "加熱系統", en: "Heating System" },
+    title: {
+      zh: "加熱系統",
+      en: "Heating System",
+      ja: "加熱システム"
+    },
     description: {
       zh: "穩定控溫的模組化加熱解決方案，適用於紡絲與熱處理工序。採用先進的 PID 控制演算法，確保溫度精確控制。",
-      en: "Stable heating modules for spinning and thermal processing."
+      en: "Stable heating modules for spinning and thermal processing.",
+      ja: "紡糸および熱処理工程向けの安定した温度制御モジュール。PIDアルゴリズムにより高精度な制御を実現。"
     },
     image: "/images/demo/320x210.png",
     features: {
       zh: ["PID 精密溫控", "安全防護電路設計", "多組區域加熱控制", "節能設計", "遠程監控"],
-      en: ["Precise PID control", "Built-in safety system", "Multi-zone heating"]
+      en: ["Precise PID control", "Built-in safety system", "Multi-zone heating"],
+      ja: ["PID精密温度制御", "安全保護回路設計", "複数エリア加熱制御", "省エネ設計", "遠隔監視対応"]
     },
     benefits: {
       zh: ["溫度波動控制在±0.5°C", "能耗降低20%", "延長設備使用壽命", "提高產品一致性"],
-      en: ["Temperature control within ±0.5°C", "20% lower energy consumption", "Extended equipment life"]
+      en: ["Temperature control within ±0.5°C", "20% lower energy consumption", "Extended equipment life"],
+      ja: ["±0.5°C以内の温度制御", "消費電力20%削減", "装置寿命の延長", "製品一貫性の向上"]
     },
     specs: {
       zh: [
@@ -114,28 +153,43 @@ const productData: Record<string, {
         { name: "Control Precision", value: "±0.5°C" },
         { name: "Heating Rate", value: "20°C/min" },
         { name: "Power Supply", value: "380V/50Hz" }
+      ],
+      ja: [
+        { name: "温度範囲", value: "室温～350°C" },
+        { name: "制御精度", value: "±0.5°C" },
+        { name: "昇温速度", value: "20°C/分" },
+        { name: "電源仕様", value: "380V/50Hz" }
       ]
     },
     applications: {
       zh: "加彈、熱定型、加熱封口等。",
-      en: "DTY, heat-setting, sealing."
+      en: "DTY, heat-setting, sealing.",
+      ja: "DTY加工、熱定形、加熱封止などに対応。"
     },
     file: "/files/heat.pdf"
   },
+
   integration: {
-    title: { zh: "機台整合", en: "Machine Integration" },
+    title: {
+      zh: "機台整合",
+      en: "Machine Integration",
+      ja: "機械統合システム"
+    },
     description: {
       zh: "老舊機台加值方案，整合 PLC 與感測器，打造智慧節點。讓現有設備不需大幅更換即可升級為智能生產系統。",
-      en: "Retrofitting old machines with PLC/sensors for smart upgrade."
+      en: "Retrofitting old machines with PLC/sensors for smart upgrade.",
+      ja: "旧式機械をPLCとセンサーで統合し、スマートノードに変換。既存設備を大きく入れ替えずにスマート化を実現。"
     },
     image: "/images/demo/320x210.png",
     features: {
       zh: ["訊號轉換模組化", "設備狀態集中回報", "支援 Modbus, OPC UA", "跨品牌設備整合", "硬體與軟體全方位升級"],
-      en: ["Modular signal gateway", "Central status dashboard", "Supports Modbus/OPC"]
+      en: ["Modular signal gateway", "Central status dashboard", "Supports Modbus/OPC"],
+      ja: ["信号変換のモジュール化", "設備状態の集中報告", "Modbus・OPC UA対応", "異ブランド統合", "ハード・ソフトの全面アップグレード"]
     },
     benefits: {
       zh: ["節省60%以上設備更新成本", "延長舊設備使用壽命", "實現智能化生產", "縮短技術轉型時間"],
-      en: ["Save 60% equipment renewal costs", "Extend legacy system life", "Enable smart manufacturing"]
+      en: ["Save 60% equipment renewal costs", "Extend legacy system life", "Enable smart manufacturing"],
+      ja: ["設備更新コスト60%以上削減", "旧設備の寿命延長", "スマート生産の実現", "技術転換期間の短縮"]
     },
     specs: {
       zh: [
@@ -149,28 +203,42 @@ const productData: Record<string, {
         { name: "Interfaces", value: "RS232/485/Ethernet" },
         { name: "Sensors Support", value: "Temp/Pressure/Vibration" },
         { name: "Data Storage", value: "Local/Cloud" }
+      ],
+      ja: [
+        { name: "対応プロトコル", value: "Modbus/OPC UA/MQTT" },
+        { name: "インターフェース", value: "RS232/485/Ethernet" },
+        { name: "対応センサー", value: "温度/圧力/振動/電流" },
+        { name: "データ保存", value: "ローカル/クラウド両対応" }
       ]
     },
     applications: {
       zh: "適用所有無控制器舊型設備。",
-      en: "For non-intelligent industrial machines."
+      en: "For non-intelligent industrial machines.",
+      ja: "コントローラ非搭載の旧式産業機械に対応。"
     },
     file: "/files/integration.pdf"
   },
   factory: {
-    title: { zh: "智慧工廠", en: "Smart Factory" },
+    title: {
+      zh: "智慧工廠",
+      en: "Smart Factory",
+      ja: "スマートファクトリー"
+    },
     description: {
       zh: "以雲端為基礎的智慧工廠解決方案，整合 OT 與 IT。實現全廠設備互聯互通，提供完整的生產力管理方案。",
-      en: "Cloud-based smart factory platform bridging OT/IT."
+      en: "Cloud-based smart factory platform bridging OT/IT.",
+      ja: "クラウドベースのスマートファクトリーソリューションでOTとITを融合し、生産設備全体の連携を実現。"
     },
     image: "/images/demo/320x210.png",
     features: {
       zh: ["數據採集與監控平台", "異常通知推播系統", "歷史資料可視化查詢", "生產排程優化", "預測性維護"],
-      en: ["Data acquisition platform", "Alert system", "Historical dashboard"]
+      en: ["Data acquisition platform", "Alert system", "Historical dashboard"],
+      ja: ["データ収集・監視プラットフォーム", "異常通知のプッシュ配信", "履歴データの可視化", "生産スケジュール最適化", "予測保守"]
     },
     benefits: {
       zh: ["提高25%整體設備效率(OEE)", "減少50%非計劃停機時間", "降低15%能源消耗", "提升決策效率"],
-      en: ["25% improved OEE", "50% less unplanned downtime", "15% lower energy consumption"]
+      en: ["25% improved OEE", "50% less unplanned downtime", "15% lower energy consumption"],
+      ja: ["OEE 25%向上", "突発的な停止時間を50%削減", "エネルギー消費15%削減", "意思決定効率の向上"]
     },
     specs: {
       zh: [
@@ -184,28 +252,42 @@ const productData: Record<string, {
         { name: "Data Latency", value: "<100ms" },
         { name: "Data Retention", value: "36 months" },
         { name: "User Access", value: "Multi-level" }
+      ],
+      ja: [
+        { name: "対応設備数", value: "無制限" },
+        { name: "データ遅延", value: "<100ms" },
+        { name: "保存期間", value: "36ヶ月" },
+        { name: "アクセス権限", value: "多階層管理" }
       ]
     },
     applications: {
       zh: "中大型工廠資訊整合。",
-      en: "For mid/large factory digitalization."
+      en: "For mid/large factory digitalization.",
+      ja: "中・大規模工場のデジタル化対応に最適。"
     },
     file: "/files/factory.pdf"
   },
   parts: {
-    title: { zh: "紡織零組配件", en: "Textile Spare Parts" },
+    title: {
+      zh: "紡織零組配件",
+      en: "Textile Spare Parts",
+      ja: "繊維機械用交換部品"
+    },
     description: {
       zh: "導絲座、陶瓷張力器、導輪等紡織機核心零件。採用高品質材料製造，確保長時間運行的可靠性和穩定性。",
-      en: "Spindle bases, ceramic guides, tensioners."
+      en: "Spindle bases, ceramic guides, tensioners.",
+      ja: "糸ガイド、セラミックテンショナー、ガイドローラーなど、長寿命・高品質の繊維機械用部品。"
     },
     image: "/images/demo/320x210.png",
     features: {
       zh: ["高精密加工", "耐磨陶瓷材質", "客製化規格接受訂製", "快速交貨", "與原廠相容"],
-      en: ["Precision machining", "Durable ceramics", "Custom sizes available"]
+      en: ["Precision machining", "Durable ceramics", "Custom sizes available"],
+      ja: ["高精度加工", "耐摩耗セラミック材質", "カスタムサイズ対応", "短納期", "純正品互換"]
     },
     benefits: {
       zh: ["延長使用壽命", "降低摩擦係數", "減少維護頻率", "提高產品質量"],
-      en: ["Extended lifespan", "Lower friction", "Reduced maintenance", "Improved product quality"]
+      en: ["Extended lifespan", "Lower friction", "Reduced maintenance", "Improved product quality"],
+      ja: ["寿命延長", "摩擦低減", "メンテナンス頻度低下", "製品品質向上"]
     },
     specs: {
       zh: [
@@ -219,14 +301,21 @@ const productData: Record<string, {
         { name: "Surface Roughness", value: "Ra0.2" },
         { name: "Dimensional Accuracy", value: "±0.01mm" },
         { name: "Hardness", value: "HRA90+" }
+      ],
+      ja: [
+        { name: "材質", value: "アルミナ/ジルコニア/炭化ケイ素" },
+        { name: "表面粗さ", value: "Ra0.2" },
+        { name: "寸法精度", value: "±0.01mm" },
+        { name: "硬度", value: "HRA90以上" }
       ]
     },
     applications: {
       zh: "假撚、包紗、倍捻等機種備品。",
-      en: "Spare parts for DTY, covering, twisting machines."
+      en: "Spare parts for DTY, covering, twisting machines.",
+      ja: "DTY、カバリング、撚糸機のスペアパーツに最適。"
     },
     file: "/files/parts.pdf"
-  },
+  }
 };
 
 const ProductDetail = () => {

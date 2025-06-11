@@ -1,0 +1,53 @@
+{
+  "title": "Contact Us",
+  "subtitle": "Our professional team is ready to provide you with optimized production and smart manufacturing solutions.",
+
+  "form": {
+    "title": "Send a Message",
+    "description": "Please fill out the form below and our specialist will contact you shortly.",
+    "name": "Name",
+    "company": "Company Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "name_placeholder": "Enter your name",
+    "company_placeholder": "Enter your company name",
+    "email_placeholder": "Enter your email address",
+    "phone_placeholder": "Enter your contact number",
+    "message_placeholder": "Describe your needs or issues",
+    "submit": "Submit Contact Form",
+    "sending": "Sending...",
+    "success": "Your message has been successfully sent. We will contact you soon.",
+    "fail": "Submission failed. Please try again later or call us directly."
+  },
+
+  "info": {
+    "title": "Contact Information",
+    "address": "Address: 5F, No. 1, Ln. 538, Zhongzheng Rd., Xindian Dist., New Taipei City",
+    "phone": "Phone: +886-2-22186163"
+  },
+
+  "hours": {
+    "title": "Business Hours",
+    "weekday": "Monday - Friday",
+    "sat": "Saturday",
+    "sun": "Sunday",
+    "closed": "Closed"
+  },
+
+  "map": {
+    "title": "Our Location"
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How do I choose the right smart solution for my factory?",
+    "a1": "We recommend contacting our professional consultants to describe your factory status, challenges, and needs. We will provide a tailored solution based on your situation.",
+    "q2": "How long does system implementation take?",
+    "a2": "The implementation time depends on your factory size and system complexity. A single-line setup may take 2–4 weeks, while full-scale integration could take 2–3 months. We provide a detailed plan and timeline.",
+    "q3": "What after-sales service and technical support do you provide?",
+    "a3": "We offer complete after-sales services including system maintenance, upgrades, troubleshooting, and training. We also provide 24/7 emergency tech support to ensure system stability.",
+    "q4": "How can I evaluate the benefits after implementation?",
+    "a4": "We help you define KPIs such as improved productivity, reduced defect rates, and energy savings. Post-implementation, we offer regular reports to measure ROI."
+  }
+}

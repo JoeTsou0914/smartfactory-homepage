@@ -1,21 +1,30 @@
 /* NavBar.module.css */
 .navDefault {
   background-color: rgb(29, 78, 216) !important;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navScrolled {
-  background-color: rgb(31, 41, 55) !important;
-  transition: background-color 0.3s ease-in-out;
+  background-color: rgb(17, 24, 39) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navLink {
+.logoDefault {
   color: white !important;
-  font-weight: bold !important;
-  opacity: 1 !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.5s ease-in-out;
 }
 
-.navLink:hover {
-  opacity: 0.9 !important;
+.logoScrolled {
+  background: linear-gradient(135deg, #22d3ee, #3b82f6, #1e40af) !important;
+  background-size: 200% 200% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  transform: scale(1.05) !important;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) !important;
+  transition: all 0.5s ease-in-out;
 }

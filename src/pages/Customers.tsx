@@ -10,7 +10,7 @@ const Customers = () => {
       challenge: "生產特殊紗線，品質不穩定",
       solution: "QAI 智能品質監測系統",
       result: "減少30%斷線率，提高20%生產效率",
-     // image: "/images/demo/customer/case-study-1.jpg"
+      image: "/images/customer/fcfc.jpg"
     },
     {
       name: "宏遠紡織",
@@ -18,7 +18,7 @@ const Customers = () => {
       challenge: "老舊設備無法監控，數據無法整合",
       solution: "機台整合系統",
       result: "實現全廠設備聯網，管理效率提升35%",
-     // image: "/images/demo/customer/case-study-2.jpg"
+      image: "/images/customer/everest.jpg"
     },
     {
       name: "南亞塑膠",
@@ -26,7 +26,7 @@ const Customers = () => {
       challenge: "機台種類多，管理不易，耗費大量人力",
       solution: "智慧工廠",
       result: "檢測效率提升50%，不良品率降低15%",
-      //image: "/images/demo/customer/case-study-3.jpg"
+      image: "/images/customer/npc.jpg"
     }
   ];
 

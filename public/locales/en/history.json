@@ -1,0 +1,57 @@
+{
+  "title": "Our History & Vision",
+  "description": "From guide parts to smart textile systems — 40 years of innovation and dedication.",
+  "intro": {
+    "1": "Founded in 1983, YU HWA started by producing core textile components such as ceramic guides and tension parts, earning strong trust through quality and precision.",
+    "2": "As smart manufacturing emerged, we pivoted toward sensor development, PLC integration, and central control systems, becoming a solution provider for automation and quality monitoring.",
+    "3": "We believe innovation and expertise are the keys to creating value for clients and advancing the digital transformation of the textile industry."
+  },
+  "milestone": "Milestones",
+  "timeline": {
+    "2017": {
+      "title": "Debut in Japan & TITAS",
+      "desc": "Showcased integration solutions at TITAS and Japan for the first time."
+    },
+    "2016": {
+      "title": "Tension Monitoring Module",
+      "desc": "Launched a platform powered by SQL Server for tension analysis and break alerts."
+    },
+    "2015": {
+      "title": "QAI Named",
+      "desc": "Introduced a central control structure for quality-focused smart monitoring."
+    },
+    "2014": {
+      "title": "Sensor Integration",
+      "desc": "Unified tension, temperature, and output signal management."
+    },
+    "2012": {
+      "title": "PLC Control Adoption",
+      "desc": "Enabled process stability through sensor-PLC integration."
+    },
+    "2010": {
+      "title": "QAI Prototype",
+      "desc": "Early model combined sensor data and SQL logs for experimentation."
+    },
+    "2005": {
+      "title": "Automation Transition",
+      "desc": "Shifted toward logic control and customized sensor applications."
+    },
+    "2000a": {
+      "title": "Precision Tensioner",
+      "desc": "Improved yarn tension stability through adjustable tensioners."
+    },
+    "2000b": {
+      "title": "Export & Customization",
+      "desc": "Delivered both standardized and client-tailored solutions globally."
+    }
+  },
+  "core": {
+    "title": "Our Core Values",
+    "innovation": "Innovation",
+    "desc1": "Driven by continuous innovation from parts to smart systems.",
+    "precision": "Precision",
+    "desc2": "40 years of expertise in mechanics and sensing technologies.",
+    "trust": "Trust",
+    "desc3": "Strong partnerships built on reliability and shared growth."
+  }
+}
