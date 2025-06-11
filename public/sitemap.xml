@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="https://www.w3.org/1999/xhtml">
+<urlset 
+  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="https://www.w3.org/1999/xhtml"
+>
 
   <!-- 首頁 -->
   <url>
@@ -19,17 +21,22 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- 產品詳細頁（範例：QAI、Fuzz） -->
+  <!-- QAI 產品頁 -->
   <url>
-    <loc>https://yourdomain.com/product/qai</loc>
+    <loc>https://qai-lab.com/product/qai</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://qai-lab.com/zh/product/qai" />
     <xhtml:link rel="alternate" hreflang="en" href="https://qai-lab.com/en/product/qai" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://qai-lab.com/ja/product/qai" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Fuzz 檢測產品頁 -->
   <url>
     <loc>https://qai-lab.com/product/fuzz</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qai-lab.com/zh/product/fuzz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qai-lab.com/en/product/fuzz" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qai-lab.com/ja/product/fuzz" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,6 +44,9 @@
   <!-- 關於我們 -->
   <url>
     <loc>https://qai-lab.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qai-lab.com/zh/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qai-lab.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qai-lab.com/ja/about" />
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -44,6 +54,9 @@
   <!-- 客戶案例 -->
   <url>
     <loc>https://qai-lab.com/customers</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qai-lab.com/zh/customers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qai-lab.com/en/customers" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qai-lab.com/ja/customers" />
     <changefreq>quarterly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -51,6 +64,9 @@
   <!-- 聯絡我們 -->
   <url>
     <loc>https://qai-lab.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qai-lab.com/zh/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qai-lab.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qai-lab.com/ja/contact" />
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
