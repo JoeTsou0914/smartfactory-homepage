@@ -4,17 +4,17 @@
 
   <!-- 首頁 -->
   <url>
-    <loc>https://yourdomain.com/</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://yourdomain.com/zh/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://yourdomain.com/ja/" />
+    <loc>https://qai-lab.com/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qai-lab.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qai-lab.com/en/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qai-lab.com/ja/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- 產品總覽 -->
   <url>
-    <loc>https://yourdomain.com/services</loc>
+    <loc>https://qai-lab.com/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -22,35 +22,35 @@
   <!-- 產品詳細頁（範例：QAI、Fuzz） -->
   <url>
     <loc>https://yourdomain.com/product/qai</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://yourdomain.com/zh/product/qai" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en/product/qai" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://yourdomain.com/ja/product/qai" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qai-lab.com/zh/product/qai" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qai-lab.com/en/product/qai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qai-lab.com/ja/product/qai" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/product/fuzz</loc>
+    <loc>https://qai-lab.com/product/fuzz</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 關於我們 -->
   <url>
-    <loc>https://yourdomain.com/about</loc>
+    <loc>https://qai-lab.com/about</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 客戶案例 -->
   <url>
-    <loc>https://yourdomain.com/customers</loc>
+    <loc>https://qai-lab.com/customers</loc>
     <changefreq>quarterly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 聯絡我們 -->
   <url>
-    <loc>https://yourdomain.com/contact</loc>
+    <loc>https://qai-lab.com/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
